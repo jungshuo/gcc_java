@@ -1,0 +1,15 @@
+#配置数据源信息
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源类型
+    driver-class-name: com.mysql.jdbc.Driver #驱动名称
+    url: jdbc:mysql:///demo #URL链接
+    username: root
+    password: 123456
+  mvc: #配置jsp映射路径 return "index" /index.jsp
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis:
+  type-aliases-package: gcc.example.studentmanager.pojo
+  mapper-locations: classpath:/mapper/*Mapper.xml
